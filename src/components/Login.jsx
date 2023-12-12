@@ -1,17 +1,28 @@
 import React, { useState } from 'react';
-import { Container, CssBaseline, Avatar, Typography, TextField, Button } from '@mui/material';
-// import { makeStyles } from '@mui/styles';
+import { Container, CssBaseline, Avatar, Typography, TextField, Button, createTheme } from '@mui/material';
+import { makeStyles, ThemeProvider  } from '@mui/styles';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import { withTheme } from '@emotion/react';
 
-// const useStyles = makeStyles((theme) => ({
-//     paper: {
-//         marginTop: theme.spacing(8)
-//     }
-// }));
+const theme = new createTheme();
 
+const useStyles = makeStyles((theme) => ({
+    paper: {
+        paddingTop: '100px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
+    },
+    
+    form: {
+        width: '100%',
+    },
+
+    
+}));
 
 const LoginForm = () => {
-    // const classes = useStyles();
+    const classes = useStyles();
     
     const [formData, setFormData] = useState({
         username : '',
@@ -27,15 +38,21 @@ const LoginForm = () => {
         );
     };
 
+    const submitForm = (e) => {
+        e.preventDefault()
+        alert(`Hey! ${formData.username} \n\nLogin Successfull !!`);
+    };
+
     return (
+        <ThemeProvider theme={theme}>
         <Container component='main' maxWidth='xs'>
             <CssBaseline />
-            <div>
-                <Avatar>
+            <div className={classes.paper}>
+                <Avatar className={classes.avatar}>
                     {/* <LockOutlinedIcon /> */}
                 </Avatar>
                 <Typography component='h1' variant='h6'>Sign In</Typography>
-                <form>
+                <form className={classes.form} onSubmit = {submitForm}>
                     <TextField
                         name = 'username'
                         id = 'userField'
@@ -54,7 +71,7 @@ const LoginForm = () => {
                         type = 'password'
                         margin = 'normal'
                         variant = 'outlined'
-                        fullWidth required
+                        fullWidth required autofocus
                         autoComplete = 'password'
                         value = {formData.password}
                         onChange = {eventHandle}
@@ -63,7 +80,7 @@ const LoginForm = () => {
                         type = 'submit'
                         color = 'primary'
                         variant = 'contained'
-                        // className = 'classes.submit'
+                        className = {classes.submit}
                         fullWidth
                     >
                         Sign In
@@ -71,6 +88,7 @@ const LoginForm = () => {
                 </form>
             </div>
         </Container>
+        </ThemeProvider>
     );
 };
 
