@@ -34,7 +34,8 @@ const SignUpForm = () => {
         lname : '',
         email : '',
         username : '',
-        password : ''
+        password : '',
+        confirmpwd : ''
     });
 
     const eventHandle = (e) => {
@@ -48,8 +49,14 @@ const SignUpForm = () => {
 
     const submitForm = (e) => {
         e.preventDefault()
-        alert('Successfully Created Account !!');
-        navigate('/login');
+        if(formData.password === formData.confirmpwd) {
+            alert('Successfully Created Account !!');
+            navigate('/login');
+        }
+        else {
+            formData.confirmpwd = '';
+            alert('Invalid');
+        }
     };
 
     return (
@@ -125,11 +132,13 @@ const SignUpForm = () => {
                         />
                         <TextField 
                             label = 'Confirm Password'
+                            name = 'confirmpwd'
                             type = 'password'
                             margin = 'normal'
                             variant = 'outlined'
                             fullWidth required autofocus
-                            autoComplete = 'password'
+                            value = {formData.confirmpwd}
+                            onChange={eventHandle}
                         />
                         
                         <Button 
