@@ -24,10 +24,13 @@ const useStyles = makeStyles((darkTheme) => ({
     
 }));
 
-const LoginForm = () => {
+const SignUpForm = () => {
     const classes = useStyles();
     
     const [formData, setFormData] = useState({
+        fname : '',
+        lname : '',
+        email : '',
         username : '',
         password : ''
     });
@@ -43,7 +46,7 @@ const LoginForm = () => {
 
     const submitForm = (e) => {
         e.preventDefault()
-        alert(`Hey! ${formData.username} \n\nLogin Successfull !!`);
+        alert('Successfully Created Account !!');
     };
 
     return (
@@ -54,8 +57,35 @@ const LoginForm = () => {
                 <Avatar className={classes.avatar}>
                     {/* <LockOutlinedIcon /> */}
                 </Avatar>
-                <Typography component='h1' variant='h6'>Sign In</Typography>
+                <Typography component='h1' variant='h6'>Sign up</Typography>
                 <form className={classes.form} onSubmit = {submitForm}>
+                    <Grid container spacing={2}>
+                        <Grid item xs={6}>
+                        <TextField
+                            name = 'fname'
+                            id = 'fname'
+                            label = 'Firstname'
+                            variant = 'outlined'
+                            margin = 'normal'
+                            autoComplete = 'fname'
+                            value = {formData.fname}
+                            autoFocus required
+                            onChange={eventHandle}
+                        />
+                        </Grid>
+                        <Grid item xs={6}>
+                        <TextField
+                            name = 'lname'
+                            id = 'lname'
+                            label = 'Lastname'
+                            variant = 'outlined'
+                            margin = 'normal'
+                            autoComplete = 'lname'
+                            value = {formData.lname}
+                            onChange={eventHandle}
+                        />
+                        </Grid>
+                    </Grid>
                     <TextField
                         name = 'username'
                         id = 'userField'
@@ -64,7 +94,18 @@ const LoginForm = () => {
                         margin = 'normal'
                         autoComplete = 'username'
                         value = {formData.username}
-                        fullWidth autoFocus required
+                        fullWidth required
+                        onChange={eventHandle}
+                    />
+                    <TextField
+                        name = 'mail'
+                        id = 'mail'
+                        label = 'Email Address'
+                        variant = 'outlined'
+                        margin = 'normal'
+                        autoComplete = 'mail'
+                        value = {formData.mail}
+                        fullWidth required
                         onChange={eventHandle}
                     />
                     <TextField 
@@ -79,9 +120,13 @@ const LoginForm = () => {
                         value = {formData.password}
                         onChange = {eventHandle}
                     />
-                    <FormControlLabel 
-                        control = {<Checkbox value = 'remember' color = 'primary'/>}
-                        label = 'Remember me'
+                    <TextField 
+                        label = 'Confirm Password'
+                        type = 'password'
+                        margin = 'normal'
+                        variant = 'outlined'
+                        fullWidth required autofocus
+                        autoComplete = 'password'
                     />
                     
                     <Button 
@@ -92,22 +137,19 @@ const LoginForm = () => {
                         fullWidth
                         sx={{ mt: 3, mb: 2 }}
                     >
-                        Sign In
+                        Create Account
                     </Button>
 
                     <Grid container>
                         <Grid item xs>
-                            <Link href='#' variant='body2'>
-                                Forget password?
-                            </Link>
                         </Grid>
                         <Grid item>
                             <Link href='#' variant='body2' underline='hover'>
                                 <Typography variant='body2' color='textPrimary' display='inline'>
-                                    Don't have account?
+                                    Already have an account?
                                 </Typography>
                                 <Typography variant='body2' color='primary' display='inline'>
-                                    &nbsp;Sign Up
+                                    &nbsp;Sign In
                                 </Typography>
                             </Link>
                         </Grid>
@@ -119,4 +161,4 @@ const LoginForm = () => {
     );
 };
 
-export default LoginForm;
+export default SignUpForm;
