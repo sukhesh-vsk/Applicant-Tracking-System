@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Container, CssBaseline, Avatar, Typography, TextField, Button, FormControlLabel, Checkbox, Link, Grid } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import './styles/login.css';
+import '../styles/login.css';
+import asset from '../assets/login.png';
 
 const darkTheme = createTheme({
     palette: {
@@ -49,9 +50,9 @@ const LoginForm = () => {
 
     return (
         <ThemeProvider theme={darkTheme}>
-        <h2 className='header'>Applicant Tracking System</h2>
+        <h2 className='header animate-slide'>Applicant Tracking System</h2>
         <div className='login-cover'>
-            <img src="./login.png" alt='login.png'/>   
+            <img src={asset} alt='login.png' className='animate-slide'/>   
             <Container component='main' maxWidth='xs' className={classes.root}>
                 <CssBaseline />
                 <div className={classes.paper}>

@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { Container, CssBaseline, Avatar, Typography, TextField, Button, Link, Grid } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import './styles/signup.css';
+import '../styles/signup.css';
+import asset from '../assets/login.png';
 
 const darkTheme = createTheme({
     palette: {
@@ -69,7 +70,7 @@ const SignUpForm = () => {
     return (
         <ThemeProvider theme={darkTheme}>
         <div className='login-cover'>
-            <img src="./login.png" alt='login.png'/>   
+            <img src={asset} alt='login.png'/>   
             <Container component='main' maxWidth='xs' className={classes.root}>
                 <CssBaseline />
                 <div className={classes.paper}>
