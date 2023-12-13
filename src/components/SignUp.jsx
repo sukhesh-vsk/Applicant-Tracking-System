@@ -38,6 +38,8 @@ const SignUpForm = () => {
         confirmpwd : ''
     });
 
+    const [passwordsMatch, setPasswordsMatch] = useState(true);
+    
     const eventHandle = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -45,6 +47,7 @@ const SignUpForm = () => {
             [name] : value
         }
         );
+        setPasswordsMatch(true);
     };
 
     const submitForm = (e) => {
@@ -54,8 +57,12 @@ const SignUpForm = () => {
             navigate('/login');
         }
         else {
-            formData.confirmpwd = '';
-            alert('Invalid');
+            setFormData({
+                ...formData,
+                confirmpwd : ''
+            });
+            setPasswordsMatch(false);
+            alert('Password and Confirm Password must match.');
         }
     };
 
@@ -139,6 +146,8 @@ const SignUpForm = () => {
                             fullWidth required autofocus
                             value = {formData.confirmpwd}
                             onChange={eventHandle}
+                            error={!passwordsMatch}
+                            helperText={!passwordsMatch && 'Password and Confirm Password must match.'}
                         />
                         
                         <Button 
