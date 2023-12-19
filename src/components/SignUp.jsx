@@ -1,34 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, CssBaseline, Avatar, Typography, TextField, Button, Link, Grid } from '@mui/material';
-import { makeStyles } from '@mui/styles';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
 import '../styles/signup.css';
 import asset from '../assets/login.png';
 
-const darkTheme = createTheme({
-    palette: {
-        mode: 'light',
-    },
-});
-
-const useStyles = makeStyles((darkTheme) => ({
-    paper: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-    },
-    
-    form: {
-        width: '100%',
-    },
-
-    
-}));
-
 const SignUpForm = () => {
     const navigate = useNavigate();
-    const classes = useStyles();
     
     const [formData, setFormData] = useState({
         fname : '',
@@ -68,15 +45,22 @@ const SignUpForm = () => {
     };
 
     return (
-        <ThemeProvider theme={darkTheme}>
         <div className='login-cover'>
             <img src={asset} alt='login.png'/>   
-            <Container component='main' maxWidth='xs' className={classes.root}>
+            <Container component='main' maxWidth='xs' >
                 <CssBaseline />
-                <div className={classes.paper}>
-                    <Avatar className={classes.avatar}></Avatar>
+                <div 
+                    sx = {{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                    }}
+                >
+                    <Avatar></Avatar>
                     <Typography component='h1' variant='h6'>Sign up</Typography>
-                    <form className={classes.form} onSubmit = {submitForm}>
+                    <form onSubmit = {submitForm}
+                        sx = {{width: '100%'}}
+                    >
                         <Grid container spacing={2}>
                             <Grid item xs={6}>
                             <TextField
@@ -155,7 +139,6 @@ const SignUpForm = () => {
                             type = 'submit'
                             color = 'primary'
                             variant = 'contained'
-                            className = {classes.submit}
                             fullWidth
                             sx={{ mt: 3, mb: 2 }}
                         >
@@ -180,7 +163,6 @@ const SignUpForm = () => {
                 </div>
             </Container>
         </div>
-        </ThemeProvider>
     );
 };
 
