@@ -1,4 +1,9 @@
 .side__container {
     background-color:  rgb(240, 240, 240);
-    width:350px;
+    width:450px;
+}
+
+.remainder__container {
+    display: flex;
+    flex-direction: column;
 }

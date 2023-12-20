@@ -1,25 +1,49 @@
-import { Grid } from '@mui/material'
 import React from 'react'
+import { Grid } from '@mui/material'
+import { Button } from '@mui/joy'
+import { FaPlus } from "react-icons/fa6";
 
 import './Main.css'
 function Main() {
   return (
     <div>
         <Grid container className='main__container'>
-            <Grid item className='main__container__head'>
-                <h3>Today Activities</h3>
-                <p>Manage your habits, remainder, events, activities.</p>
-            </Grid>
+            <div className='main__container-header'>
+                <Grid item className='main__container__head' xs>
+                    <h3>Today Activities</h3>
+                    <p>Manage your habits, remainder, events, activities.</p>
+                </Grid>
+                <Grid item>
+                    <Button>
+                        <FaPlus/>Add Task
+                    </Button>
+                </Grid>
+            </div>
             <Grid item>
                 <Grid contanier className='task__container'>
                     <Grid item className='task__card'>
-                        <h1>Task 1</h1>
+                        <h2>Task 1</h2>
+                        <p>Descripion</p>
                     </Grid>
                     <Grid item className='task__card'>
-                        Task 2
+                        <h2>Task 2</h2>
+                        <p>Descripion</p>
                     </Grid>
                     <Grid item className='task__card'>
-                        Task 3
+                        <h2>Task 3</h2>
+                        <p>Descripion</p>
+                    </Grid>
+                    <Grid item className='task__card'>
+                        <h2>Task 4</h2>
+                        <p>Descripion</p>
+                    </Grid>
+                    <Grid item className='task__card'>
+                        <h2>Task 5</h2>
+                        <p>Descripion</p>
+                    </Grid>
+                    <Grid item className='task__card'>
+                        <h2>Task 6</h2>
+                        <p>Descripion</p>
                     </Grid>
                 </Grid>
             </Grid>
