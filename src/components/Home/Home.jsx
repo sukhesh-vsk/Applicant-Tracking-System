@@ -5,6 +5,7 @@ import Header from "../Header/Header";
 import Navbar from "../NavBar/Navbar";
 import Main from "../Main/Main";
 import SideContent from "../SideContent/SideContent";
+import './Home.css'
 
 export default function Home() {
     return (
@@ -13,14 +14,14 @@ export default function Home() {
             <StyledEngineProvider injectFirst>
                 <CssVarsProvider>
                     <Header />
-                    <section style={{display: 'flex'}}>
-                        <div>
-                            <Navbar/>
+                    <section style={{ display: 'flex', position: 'relative', minHeight: '100vh' }} className="flex-container">
+                        <div style={{ width: '300px' }} className="flex-item">
+                            <Navbar />
                         </div>
-                        <div style={{flex: 1}}>
+                        <div style={{ flex: 1, position: 'relative', right: '40px' }} className="flex-item">
                             <Main />
                         </div>
-                        <div>
+                        <div style={{ width: '200px', position: 'relative', right: '50px'}} className="flex-item">
                             <SideContent />
                         </div>
                     </section>

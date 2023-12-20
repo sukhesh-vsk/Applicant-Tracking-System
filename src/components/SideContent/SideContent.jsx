@@ -6,12 +6,13 @@ function SideContent() {
   return (
     <div className='side__container'>
       <div className='side__content-remainder'>
+        <h2 className='remainder-title'>Remainder</h2>
         <Grid container className='all-remainders'>
           <Grid item className='remainder__container'>
-            {/* <h2>Remainder</h2> */}
-            <p>11:00-12:00</p>
+            <h2>Remainder 1</h2>
+            <p className='schedule-time'>17:30-18:00</p>
             <Divider/>
-            <p>Do this, do that, and this too.</p>
+            <p className='remainder-desc'>Do this, do that, and this too.Do this, do that, and this too.</p>
           </Grid>
         </Grid>
       </div>

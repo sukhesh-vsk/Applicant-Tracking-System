@@ -36,13 +36,14 @@ function Header() {
                 >
                     User <KeyboardArrowDown />
                 </ListItemButton>
-                <Popper open={open} anchorEl={anchorEl} id={id} disablePortal keepMounted>
+                <Popper open={open} anchorEl={anchorEl} id={id} disablePortal keepMounted style={{zIndex: 99, backgroundColor: 'white'}}>
                     <List
                         role="menu"
                         aria-label="user"
                         variant="outlined"
                         sx={{
                         my: 2,
+                        zIndex: 99,
                         boxShadow: 'md',
                         borderRadius: 'sm',
                         minWidth: 180,
@@ -51,7 +52,7 @@ function Header() {
                         '--ListDivider-gap': '4px',
                         }}
                     >
-                        <ListItem role='none'>
+                        <ListItem role='none' style={{zIndex: 99}}>
                             <ListItemButton role="menuitem">
                                 <ListItemContent>User Profile</ListItemContent>
                             </ListItemButton>
