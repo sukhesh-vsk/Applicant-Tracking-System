@@ -1,0 +1,23 @@
+.main__container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(238, 235, 235);
+    width:auto;
+    * {
+        margin: 9px 15px;
+    }
+}
+
+.main__container__head {
+    h3 {
+        font-size: 30px;
+    }
+    p {
+        color: rgb(99, 94, 94);
+    }
+}
+
+.task_card h1{
+    background-color: rgb(202, 148, 148);
+    width: 300px;
+}
