@@ -1,19 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import { Login, SignUp, Home } from './components/index';
+import { Login, SignUp, Home, LandingPage } from './components/index';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      <LandingPage />
+      {/* <Router>
         <Routes>
           <Route path='/' element = { <Home/> } />
           <Route path='/login' element = { <Login/> }/>
           <Route path='/signup' element = { <SignUp/> }/>
         </Routes>
-      </Router>
+      </Router> */}
     </div>
   );
 }

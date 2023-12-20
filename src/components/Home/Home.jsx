@@ -25,7 +25,7 @@ export default function Home() {
                             <SideContent />
                         </div>
                     </section>
-                </CssVarsProvider>
+                </CssVarsProvider>``
             </StyledEngineProvider>
         </div>
     );
