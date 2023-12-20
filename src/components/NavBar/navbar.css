@@ -1,7 +1,19 @@
 .sidebar__container {
     background-color:  rgb(240, 240, 240);
+    width: 300px;
+    padding: 5px 0px 5px 20px;
 }
 
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+
+.sidebar__items {
+    margin: 10px;
+}
 
 
 /* .sidebar {

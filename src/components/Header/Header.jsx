@@ -74,7 +74,7 @@ function Header() {
     };
 
     return (
-        <div sx={{ margin: '0px' }}>
+        <div style={{ margin: '0px' }}>
             <Grid container sx={customStyles.container}>
                 <Grid item xs>
                     <h2>Logo</h2>
