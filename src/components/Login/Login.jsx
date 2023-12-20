@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Container, CssBaseline, Avatar, Typography, TextField, Button, FormControlLabel, Checkbox, Link, Grid } from '@mui/material';
 
-import '../styles/login.css';
-import asset from '../assets/login.png';
+import './login.css';
+import asset from '../../assets/login.png';
 
 const LoginForm = () => {
     const [formData, setFormData] = useState({

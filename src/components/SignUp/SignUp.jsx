@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, CssBaseline, Avatar, Typography, TextField, Button, Link, Grid } from '@mui/material';
-import '../styles/signup.css';
-import asset from '../assets/login.png';
+import './signup.css';
+import asset from '../../assets/login.png';
 
 const SignUpForm = () => {
     const navigate = useNavigate();
