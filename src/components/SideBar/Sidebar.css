@@ -1,20 +1,37 @@
 .sidebar__container {
+    border-radius: 30px;
     background-color:  rgb(240, 240, 240);
-    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    width: 250px;
+    height: 600px;
     padding: 5px 0px 5px 20px;
 }
 
-ul {
+.sidebar__contents {
     list-style-type: none;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 0px;
+    :hover {
+        background-color: rgba(0, 0, 0, 0.11);
+    }
+}
+
+li {
+    margin: 10px;
+    width: 90px;
 }
 
 .sidebar__items {
-    margin: 10px;
+    height: 35px;
+    border-radius: 5px;
+    padding: 5px 0px 0px 6px;
 }
 
+ /* {
+    display: flex;
+} */
 
 /* .sidebar {
     position: fixed;

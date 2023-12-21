@@ -18,6 +18,7 @@ h2 {
 
 .footer__container {
     display: flex;
+    justify-content: center;
 }
 
 .footer__head{
@@ -38,10 +39,21 @@ h2 {
 
 .footer__columns {
     display: flex;
+    padding-left: 100px;
 }
 
 .footer__text a :hover {
-    color: rgba(94, 223, 228, 0.856);
+    color: rgba(214, 216, 216, 0.856);
     border-bottom: 2px solid #333;
     overflow: hidden;
+}
+
+.foot {
+    font-size: 14px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.footer__content {
+    padding: 0px 20px 0px 0px;
 }

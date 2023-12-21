@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Container, CssBaseline, Avatar, Typography, TextField, Button, FormControlLabel, Checkbox, Link, Grid } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 import './login.css';
 import asset from '../../assets/login.png';
 
 const LoginForm = () => {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         username: '',
         password: ''
@@ -22,11 +24,12 @@ const LoginForm = () => {
     const submitForm = (e) => {
         e.preventDefault()
         alert(`Hey! ${formData.username} \n\nLogin Successfull !!`);
+        navigate('/home');
     };
 
     return (
         <div>
-            <h2 className='header animate-slide'>Applicant Tracking System</h2>
+            <center><h2 className='header animate-slide'>Todo Hub</h2></center>
             <div className='login-cover'>
                 <img src={asset} alt='login.png' className='animate-slide' />
                 <Container component='main' maxWidth='xs' >

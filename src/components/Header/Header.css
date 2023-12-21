@@ -1,0 +1,13 @@
+.main__header {
+    margin: 10px;
+}
+
+.header__user__dropdown {
+    margin-right: 10px;
+}
+
+.header__logo{
+    h2{
+        padding-top: 15px;
+    }
+}

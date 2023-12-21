@@ -2,7 +2,9 @@ import { KeyboardArrowDown } from '@mui/icons-material';
 import { List, ListDivider, ListItem, ListItemButton, ListItemContent } from '@mui/joy';
 import { Grid, Popper } from '@mui/material';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 // import ToggleTheme from './ToggleTheme';
+import './Header.css'
 
 function Header() {
     const customStyles = {
@@ -17,11 +19,16 @@ function Header() {
     };
 
     const UserIcon = () => {
+        const navigate = useNavigate();
         const [anchorEl, setAnchorEl] = React.useState(null);
 
         const handleClick = (event) => {
             setAnchorEl(anchorEl ? null : event.currentTarget);
         };
+        
+        const logout = () => {
+            navigate('/')
+        }
 
         const open = Boolean(anchorEl);
         const id = open ? 'user-popper' : undefined;
@@ -33,6 +40,7 @@ function Header() {
                     aria-expanded={open ? 'true' : 'false'}
                     role="menuitem"
                     onClick={handleClick}
+                    className='header__user__dropdown'
                 >
                     User <KeyboardArrowDown />
                 </ListItemButton>
@@ -64,7 +72,7 @@ function Header() {
                             </ListItemButton>
                         </ListItem>
                         <ListItem role='none'>
-                            <ListItemButton role="menuitem">
+                            <ListItemButton role="menuitem" onClick={logout}>
                                 <ListItemContent>LogOut</ListItemContent>
                             </ListItemButton>
                         </ListItem>
@@ -75,10 +83,10 @@ function Header() {
     };
 
     return (
-        <div style={{ margin: '0px' }}>
-            <Grid container sx={customStyles.container}>
-                <Grid item xs>
-                    <h2>Logo</h2>
+        <div style={{ margin: '0px 20px' }}>
+            <Grid container sx={customStyles.container} className='main__header'>
+                <Grid item xs className='header__logo'>
+                    <h2>Todo Hub</h2>
                 </Grid>
                 <Grid item sx={customStyles.user}>
                     <List
@@ -91,10 +99,10 @@ function Header() {
                             '--ListItem-gap': '0px',
                         }}
                     >
-                        <ListItem role='none'>
+                        {/* <ListItem role='none'>
                             <h3>SWITCH</h3>
-                            {/* <ToggleTheme /> */}
-                        </ListItem>
+                            <ToggleTheme />
+                        </ListItem> */}
                         <ListItem role='none'>
                             <UserIcon />
                         </ListItem>

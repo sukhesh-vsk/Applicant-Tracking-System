@@ -23,10 +23,10 @@ function LandingNavBar() {
                         </li>
                         <p>|</p>&nbsp;
                         <li className="nav_text">
-                            <a href='#' className='label'>Log in</a>
+                            <a href='/login' className='label'>Log in</a>
                         </li>
-                        <li className="nav_text">
-                            <a href='#' className='label'>Start for free</a>
+                        <li className="nav_text get-started">
+                            <a href='/signup' className='label'><span>Start for free</span></a>
                         </li>
                     </ul>
                 </Grid>

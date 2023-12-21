@@ -33,3 +33,15 @@ p {
     padding: 2px 0px 0px 0px;
     color: rgba(110, 110, 110, 0.562);
 }
+
+.get-started {
+    background-color: #de483a;
+    height: 32px;
+    width: 100px;
+    span {
+        position: relative;
+        top: 2px;
+        font-weight: 400;
+        color: #fff;
+    }
+}

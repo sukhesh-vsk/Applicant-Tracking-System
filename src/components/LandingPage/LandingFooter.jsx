@@ -10,6 +10,7 @@ import { Grid } from '@mui/material';
 
 function LandingFooter() {
   return (
+    <div className='__1'>
     <div>
       <Grid container className='footer__container'>
       <div className='footer__1'>
@@ -39,7 +40,7 @@ function LandingFooter() {
         </Grid>
       </div>
       <div className='footer__columns'>
-        <Grid item>
+        <Grid item className='footer__content'>
           <div>
             <h2 className='footer__head'>Product</h2>
           </div>
@@ -54,7 +55,7 @@ function LandingFooter() {
             </ul>
           </div>
         </Grid>
-        <Grid item>
+        <Grid item className='footer__content'>
           <div>
             <h2 className='footer__head'>Download</h2>
           </div>
@@ -70,6 +71,10 @@ function LandingFooter() {
         </Grid>
         </div>
       </Grid>
+    </div>
+    <div>
+      <p className='foot'>© 2023 Todo Hub, git.</p>
+    </div>
     </div>
   )
 }

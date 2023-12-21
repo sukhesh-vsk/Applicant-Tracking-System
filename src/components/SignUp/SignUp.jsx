@@ -45,7 +45,9 @@ const SignUpForm = () => {
     };
 
     return (
-        <div className='login-cover'>
+        <div>
+        <center><h2 className='header animate-slide'>Todo Hub</h2></center>
+        <div className='signup-cover'>
             <img src={asset} alt='login.png'/>   
             <Container component='main' maxWidth='xs' >
                 <CssBaseline />
@@ -162,6 +164,7 @@ const SignUpForm = () => {
                     </form>
                 </div>
             </Container>
+        </div>
         </div>
     );
 };
