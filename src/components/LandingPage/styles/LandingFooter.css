@@ -1,3 +1,7 @@
+.__1 {
+    margin: 50px 100px 0px 100px;
+}
+
 h2 {
     margin: 0px;
 }
@@ -8,6 +12,8 @@ h2 {
         text-align: center;
     }
     ul {
+        margin-left: -40px;
+        list-style-type: none;
         display: flex;
         li {
             margin-top: 10px;
@@ -50,10 +56,15 @@ h2 {
 
 .foot {
     font-size: 14px;
+    display: flex;
     justify-content: center;
     margin-top: 20px;
+    color: rgba(144, 146, 148, 0.815);
 }
 
 .footer__content {
     padding: 0px 20px 0px 0px;
+    ul {
+        margin-left: -40px;
+    }
 }

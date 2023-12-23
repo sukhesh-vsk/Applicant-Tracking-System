@@ -73,7 +73,7 @@ function LandingFooter() {
       </Grid>
     </div>
     <div>
-      <p className='foot'>© 2023 Todo Hub, git.</p>
+      <p className='foot' color=''>© 2023 Todo Hub, git.</p>
     </div>
     </div>
   )
