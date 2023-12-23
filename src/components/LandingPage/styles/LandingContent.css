@@ -3,39 +3,37 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 600px;
+    height: 91vh;
+    width: 700px;
     text-align: center;
-    margin: 130px 300px;    
-    a {
-        margin: 20px 0px;
-    }
+    padding-bottom: 123px;
     h1 {
         margin: 0px;
         font-size: 64px;
     }
     p {
-        margin: 10px 0px;
         font-size: 24px;
     }
 }
 
 .get-started {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #de483a;
-    height: 32px;
-    width: 100px;
+    height: 34px;
+    width: 120px;
     text-align: center;
-    padding: 3px;
     border-radius: 5px;
     margin-top: 20px;
     span {
-        position: relative;
-        top: 2px;
         font-weight: 400;
         color: #fff;
     }
 }
 
 .landing {
+    display: flex;
     align-items: center;
     justify-content: center;
 }

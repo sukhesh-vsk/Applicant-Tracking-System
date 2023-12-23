@@ -12,22 +12,32 @@ function LandingNavBar() {
                 </Grid>
                 <Grid item>
                     <ul className='navbar__right'>
-                        <li className="nav_text">
-                            <a href='#' className='nav-label'>What is Todo?</a>
-                        </li>
-                        <li className="nav_text">
-                            <a href='#' className='nav-label'>Features</a>
-                        </li>
-                        <li className="nav_text">
-                            <a href='#' className='nav-label'>About</a>
-                        </li>
+                        <a href='#' className='nav-label'>
+                            <li className="nav_text">
+                                What is Todo?
+                            </li>
+                        </a>
+                        <a href='#' className='nav-label'>
+                            <li className="nav_text">
+                                Features
+                            </li>
+                        </a>
+                        <a href='#' className='nav-label'>
+                            <li className="nav_text">
+                                About
+                            </li>
+                        </a>
                         <span class='divider'></span>
-                        <li className="nav_text">
-                            <a href='/login' className='nav-label'>Log in</a>
-                        </li>
-                        <li className="nav_text get-started">
-                            <a href='/signup' className='nav-label'><span>Start for free</span></a>
-                        </li>
+                        <a href='/login' className='nav-label'>
+                            <li className="nav_text">
+                                Log in
+                            </li>
+                        </a>
+                        <a href='/signup' className='nav-label'>
+                            <li className="nav_text get-started">
+                                <span>Start for free</span>
+                            </li>
+                        </a>
                     </ul>
                 </Grid>
             </Grid>
