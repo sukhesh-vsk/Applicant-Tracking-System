@@ -6,21 +6,21 @@ function Sidebar() {
     <div className='sidebar__container'>
         <h3>WORKSPACE</h3>
         <ul className='sidebar__contents'>
-          <li>
+          <li classname='sidebar__label'>
             <div className='sidebar__items'>
               <a>
                 Tasks
               </a>
             </div>
           </li>
-          <li>
+          <li classname='sidebar__label'>
             <div className='sidebar__items'>
               <a>
                 Notes
               </a>
             </div>
           </li>
-          <li>
+          <li classname='sidebar__label'>
             <div className='sidebar__items'>
               <a>
                 Remainder
