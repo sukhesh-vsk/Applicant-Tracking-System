@@ -28,10 +28,11 @@
 }
 
 .task__container {
+    
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    /* justify-content: space-around; */
+    justify-content: space-around;
 }
 
 .task__card{
@@ -39,7 +40,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 16px;
-    margin: 0px 30px 20px 0px;
+    /* margin: 0px 30px 20px 0px; */
     text-align: left;
     width: 300px;
     /* border: 1px solid ; */
