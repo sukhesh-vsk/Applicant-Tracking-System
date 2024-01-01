@@ -1,3 +1,11 @@
-.home {
-    width: 99%;
+.fh {
+    height: 85vh;
+}
+
+.sidebar, .subcontent {
+    background-color: rgb(240, 240, 240);
+}
+
+.main {
+    border: 1px solid #e5e5e5;
 }

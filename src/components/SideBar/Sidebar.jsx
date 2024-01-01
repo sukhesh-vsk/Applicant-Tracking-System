@@ -3,29 +3,29 @@ import './Sidebar.css'
 
 function Sidebar() {
   return (
-    <div className='sidebar__container'>
+    <div className='sidebar__container p-3'>
         <h3>WORKSPACE</h3>
-        <ul className='sidebar__contents'>
+        <ul className='sidebar__contents p-2'>
           <li classname='sidebar__label'>
-            <div className='sidebar__items'>
-              <a>
-                Tasks
-              </a>
-            </div>
+            <a>
+              <div className='sidebar__items'>
+                  Tasks
+              </div>
+            </a>
           </li>
           <li classname='sidebar__label'>
+            <a>
             <div className='sidebar__items'>
-              <a>
                 Notes
-              </a>
             </div>
+            </a>
           </li>
           <li classname='sidebar__label'>
+            <a>
             <div className='sidebar__items'>
-              <a>
                 Remainder
-              </a>
             </div>
+            </a>
           </li>
         </ul>
     </div>

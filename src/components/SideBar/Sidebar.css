@@ -1,4 +1,19 @@
-.sidebar__container {
+/* .sidebar__container {
+    background-color: rgb(240, 240, 240);
+} */
+
+.sidebar__contents {
+    list-style-type: none;
+    :hover {
+        background-color: rgba(0, 0, 0, 0.11);
+    }
+}
+
+.sidebar__items {
+    padding: 5px;
+}
+
+/* .sidebar__container {
     border-radius: 30px;
     background-color:  rgb(240, 240, 240);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);

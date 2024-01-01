@@ -109,6 +109,7 @@ function Header() {
                     </List>
                 </Grid>
             </Grid>
+            <hr />
         </div>
     );
 }

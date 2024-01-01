@@ -10,22 +10,22 @@ import './Home.css'
 export default function Home() {
     return (
         <div className='home'>
-            {/* <Test/> */}
             <StyledEngineProvider injectFirst>
                 <CssVarsProvider>
                     <Header />
-                 
-                    <section style={{ display: 'flex',  minHeight: '100vh' }} className="flex-container">
-                        <div style={{ width: '250px', position: 'relative'}} className="flex-item">
-                            <Sidebar />
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-2 p-0 fh sidebar">
+                                <Sidebar />
+                            </div>
+                            <div className="col-7 p-0 fh main">
+                                <Main />
+                            </div>
+                            <div className="col-3 p-0 fh subcontent">
+                                <SideContent />
+                            </div>
                         </div>
-                        <div style={{ flex: 1, position: 'relative'}} className="flex-item">
-                            <Main />
-                        </div>
-                        <div style={{ width: '200px'}} className="flex-item">
-                            <SideContent />
-                        </div>
-                    </section>
+                    </div>
                 </CssVarsProvider>
             </StyledEngineProvider>
         </div>

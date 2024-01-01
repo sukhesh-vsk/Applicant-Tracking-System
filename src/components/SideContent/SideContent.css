@@ -1,10 +1,16 @@
-.side__container {
+.remainder__container{
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+/* .side__container {
     background-color:  rgb(240, 240, 240);
     width:250px;
     height: 600px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    /* margin-left: 20px; */
+    //margin-left: 20px;
     position: relative;
     right: 40px;
 }
@@ -12,14 +18,14 @@
 .all-remainders {
     display: flex;
     flex-wrap: wrap;
-    /* align-items: flex-start; */
+    //align-items: flex-start;
     justify-content: space-around;
 }
 
 .remainder__container {
     display: flex;
     flex-direction: column;
-    /* background-color: rgb(235, 221, 252); */
+    //background-color: rgb(235, 221, 252);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #fff;
     border-radius: 20px;
@@ -40,13 +46,13 @@
         font-size: 13px;
         padding-bottom: 15px;
     }
-    /* white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; */
+    //white-space: nowrap;
+    //overflow: hidden;
+    //text-overflow: ellipsis;
 }
 
 .side__content-remainder{
-    /* background-color: #ffffff; */
+    // background-color: #ffffff;
     border-radius: 20px;
     margin: 0px 15px;
     position: relative;
@@ -56,4 +62,4 @@
     .remainder-title {
         margin: 0px;
     }
-}
+} */
