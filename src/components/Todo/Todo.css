@@ -1,4 +1,45 @@
-.form-check {
-    border: 1px solid black;
-    width: 75%;
+.todo {
+    border: 1px solid rgba(120, 120, 120, 0.782);
+    border-radius: 8px;
+    width: 85%;
+}
+
+.form-check-input:checked+.form-check-label {
+    text-decoration: line-through;
+}
+
+.form-check-label {
+    word-wrap: break-word;
+    /* overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    overflow: hidden; */
+    max-width: 100%;
+    display: inline;
+}
+
+.close {
+    border: none;
+    height: 20%;
+}
+
+.todo button.close {
+    visibility: hidden;
+}
+
+.todo:hover button.close {
+    visibility: visible;
+}
+
+.inpTextarea {
+    border-radius: 5px;
+}
+
+
+.rotated-icon {
+    transform: rotate(225deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.plus {
+    transition: transform 0.3s ease-in-out;
 }
