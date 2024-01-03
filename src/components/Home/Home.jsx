@@ -14,7 +14,7 @@ export default function Home() {
                 <CssVarsProvider>
                     <Header />
                     <div className="container-fluid">
-                        <div className="row">
+                        <div className="row mx-2">
                             <div className="col-2 p-0 fh sidebar">
                                 <Sidebar />
                             </div>

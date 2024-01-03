@@ -18,7 +18,7 @@ function Main() {
 
     return (
     <div>
-        <Grid container className='main__container d-flex flex-column p-4'>
+        <Grid container className='main__container d-flex flex-column p-4 pe-5'>
         <div className='main__container-header d-flex'>
             <Grid item className='main__container__head' xs>
                 <h3>Today Activities</h3>

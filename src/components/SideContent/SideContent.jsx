@@ -1,6 +1,7 @@
 import React from 'react'
 import './SideContent.css';
 import { Divider, Grid } from '@mui/material';
+import Todo from '../Todo/Todo';
 
 function SideContent() {
   return (
@@ -15,6 +16,9 @@ function SideContent() {
             <p className='remainder-desc pt-3'>Do this, do that, and this too.Do this, do that, and this too.</p>
           </Grid>
         </Grid>
+      </div>
+      <div className='todo-container'>
+        <Todo />
       </div>
     </div>
   )
